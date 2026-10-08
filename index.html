@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Derrick Black | Personal Website</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            background-color: #5c0a0a;
+            color: white;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .hero {
+            background-color: #3d0505;
+            padding: 70px 20px;
+        }
+
+        .profile-picture {
+            width: 250px;
+            max-width: 100%;
+            border: 4px solid white;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-picture:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .section-card {
+            background-color: #751414;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section-card.highlight {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45);
+        }
+
+        .section-card .card-title {
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+        }
+
+        .controls {
+            background-color: #4a0808;
+        }
+
+        footer {
+            background-color: #3d0505;
+        }
+
+        #moreAboutMe {
+            display: none;
+        }
+        body.light-mode {
+            background-color: #f2f2f2;
+            color: #222222;
+        }
+
+        body.light-mode .hero,
+        body.light-mode footer {
+            background-color: #333333;
+            color: white;
+        }
+
+        body.light-mode .controls {
+            background-color: #dddddd;
+        }
+
+        body.light-mode .section-card {
+            background-color: white;
+            color: #222222;
+        }
+
+        body.light-mode .section-card .card-title {
+            color: #5c0a0a;
+            border-bottom-color: #5c0a0a;
+        }
+
+        body.light-mode .navbar {
+            background-color: #222222 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Derrick Black</a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavigation"
+                aria-controls="mainNavigation"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">
+                            Experience
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#learning">
+                            What I Hope to Learn
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#goals">
+                            Future Goals
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="hero text-center">
+        <div class="container">
+
+            <img
+                src="https://res.cloudinary.com/ddwbso0cz/image/upload/v1789061987/20260910_133705_rjz7cs.jpg"
+                alt="Picture of Derrick Black"
+                class="profile-picture mb-4"
+            >
+
+            <h1 class="display-4 fw-bold">Derrick Black</h1>
+
+            <p id="greeting" class="lead fw-bold">
+                Welcome, stranger...
+            </p>
+
+            <p class="lead">
+                Programming and Web Development Student
+            </p>
+
+        </div>
+    </header>
+    <div class="controls py-4">
+        <div class="container text-center">
+
+            <button
+                id="welcomeButton"
+                class="btn btn-light btn-lg me-2 mb-2"
+            >
+                Hello
+            </button>
+
+            <button
+                id="themeButton"
+                class="btn btn-outline-light btn-lg mb-2"
+            >
+                Light Theme?
+            </button>
+
+        </div>
+    </div>
+    <main class="container py-5">
+
+        <div class="row g-4">
+            <div class="col-12" id="about">
+                <div class="card section-card shadow p-3 info-section">
+
+                    <div class="card-body">
+                        <h2 class="card-title">About Me</h2>
+
+                        <p class="card-text">
+                            My name is Derrick. I have a hobby of playing
+                            video games and browsing the internet. I have
+                            an interest in technology and am learning about
+                            making websites.
+                        </p>
+
+                        <div id="moreAboutMe">
+                            <p>
+                                I enjoy learning how websites work and
+                                experimenting with different ways to make
+                                them more interactive. My goal is to
+                                continue developing my technical and
+                                creative skills through projects like this
+                                one.
+                            </p>
+                        </div>
+
+                        <button
+                            id="aboutButton"
+                            class="btn btn-light"
+                        >
+                            Read More
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6" id="experience">
+                <div class="card section-card shadow h-100 p-3 info-section">
+
+                    <div class="card-body">
+                        <h2 class="card-title">Web Design Experience</h2>
+
+                        <p class="card-text">
+                            My experience with web design and development
+                            is from last school year where I learned the
+                            basics of web design through HTML, CSS, and
+                            JavaScript.
+                        </p>
+
+                        <p class="card-text">
+                            Currently, I'm also learning about jQuery
+                            scripts. There are five different ones on
+                            this page.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6" id="learning">
+                <div class="card section-card shadow h-100 p-3 info-section">
+
+                    <div class="card-body">
+                        <h2 class="card-title">What I Hope to Learn</h2>
+
+                        <p class="card-text">
+                            I hope to learn more advanced features of web
+                            design to improve my creativity.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12" id="goals">
+                <div class="card section-card shadow p-3 info-section">
+
+                    <div class="card-body">
+                        <h2 class="card-title">My Future Goals</h2>
+
+                        <p class="card-text">
+                            In the future, I would like to use these skills
+                            I acquire for some sort of job that requires
+                            creativity. Being a website designer would be
+                            one of those potential jobs I could do.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <footer class="text-center py-4 mt-4">
+        <div class="container">
+            <p class="mb-0">
+                &copy; 2026 Derrick Black | Personal Website
+            </p>
+        </div>
+    </footer>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <script>
+        $(document).ready(function() {
+            $("#welcomeButton").click(function() {
+                alert("Welcome to my domain");
+            });
+            $(".info-section").hover(
+                function() {
+                    $(this).addClass("highlight");
+                },
+                function() {
+                    $(this).removeClass("highlight");
+                }
+            );
+            $("#aboutButton").click(function() {
+
+                $("#moreAboutMe").slideToggle(400);
+
+                if ($(this).text() === "Read More") {
+                    $(this).text("Read Less");
+                } else {
+                    $(this).text("Read More");
+                }
+            });
+            $("#themeButton").click(function() {
+
+                $("body").toggleClass("light-mode");
+
+                if ($("body").hasClass("light-mode")) {
+                    $(this).text("MY EYES!");
+                } else {
+                    $(this).text("Light Theme?");
+                }
+            });
+            var currentHour = new Date().getHours();
+
+            if (currentHour < 12) {
+                $("#greeting").text(
+                    "It's morning, but where's my coffee?"
+                );
+            } else if (currentHour < 18) {
+                $("#greeting").text(
+                    "Decent afternoon, I suppose."
+                );
+            } else {
+                $("#greeting").text(
+                    "The darkness of night is here..."
+                );
+            }
+
+        });
+    </script>
+
+</body>
+</html>
